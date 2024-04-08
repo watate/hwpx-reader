@@ -2,6 +2,9 @@ package com.hwpxreader.app;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 import kr.dogfoot.hwpxlib.object.HWPXFile;
 import kr.dogfoot.hwpxlib.reader.HWPXReader;
@@ -19,8 +22,10 @@ public class App extends JFrame {
 
     private void initUI(String filePath) {
         // Create a text area inside a scroll pane
-        JTextArea textArea = new JTextArea("Extracting text from HWPX file...");
+        JTextArea textArea = new JTextArea("Extracting text from HWPX file: " + filePath);
         textArea.setEditable(false);
+        textArea.setLineWrap(true); // Enable line wrapping
+        textArea.setWrapStyleWord(true); // Enable word wrapping
         JScrollPane scrollPane = new JScrollPane(textArea);
 
         // Configure the main window (JFrame)
@@ -46,14 +51,14 @@ public class App extends JFrame {
                     .tableStartAnd("\n")
                     .tableEndAnd("\n")
                     .tableRowSeparatorAnd("\n")
-                    .tableCellSeparatorAnd("\t|\t")
+                    .tableCellSeparatorAnd("  |  ")
                     .containerStartAnd("")
                     .containerEndAnd("")
                     .lineStartAnd("")
                     .lineEndAnd("");
 
-            // HWPXFile HWPXFile = HWPXReader.fromFilepath(filePath);
-            HWPXFile HWPXFile = HWPXReader.fromFilepath("/Users/waltertay/Documents/Code/hwpx-reader/test.hwpx");
+            HWPXFile HWPXFile = HWPXReader.fromFilepath(filePath);
+            // HWPXFile HWPXFile = HWPXReader.fromFilepath("/Users/waltertay/Documents/Code/hwpx-reader/test2.hwpx");
             String extractedText = TextExtractor.extract(
                     HWPXFile,
                     TextExtractMethod.AppendControlTextAfterParagraphText,
@@ -69,6 +74,7 @@ public class App extends JFrame {
 
     public static void main(String[] args) {
         // Ensure the creation and display of the UI happens on the EDT
+
         SwingUtilities.invokeLater(() -> {
             String filePath = (args.length > 0) ? args[0] : "";
             App app = new App(filePath);

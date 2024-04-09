@@ -1,28 +1,43 @@
 package com.hwpxreader.app;
 
 import javax.swing.*;
-import java.awt.*;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
-
+import java.awt.desktop.OpenFilesHandler;
+import java.io.File;
 import kr.dogfoot.hwpxlib.object.HWPXFile;
 import kr.dogfoot.hwpxlib.reader.HWPXReader;
 import kr.dogfoot.hwpxlib.tool.textextractor.TextExtractMethod;
 import kr.dogfoot.hwpxlib.tool.textextractor.TextExtractor;
 import kr.dogfoot.hwpxlib.tool.textextractor.TextMarks;
 
+import java.awt.Desktop;
+import java.awt.desktop.OpenFilesEvent;
+import java.util.List;
+
 
 public class App extends JFrame {
 
-    public App(String filePath) {
+    public App(File file) {
+        SwingUtilities.invokeLater(() -> {
+            // String filePath = (args.length > 0) ? args[0] : "";
+            // App app = new App(args);
+            //h_open.app = app;
+            this.setVisible(true);
+            
+        });
         // Create Swing components and layout
-        initUI(filePath);
+        initUI(file);
     }
 
-    private void initUI(String filePath) {
+
+
+    public void initUI(File file) {
         // Create a text area inside a scroll pane
-        JTextArea textArea = new JTextArea("Extracting text from HWPX file: " + filePath);
+        JTextArea textArea = new JTextArea("Args 240409:339: ");
+         textArea.append("this is the file: " + file.toString());
+        // textArea.append("this is app in the handler" + handler_OpenFile.app.toString());
+         //textArea.append("this is the file in the handler" + handler_OpenFile.file);
+         //textArea.append("this is the event in the handler" + handler_OpenFile.event);
+        String filePath = "";
         textArea.setEditable(false);
         textArea.setLineWrap(true); // Enable line wrapping
         textArea.setWrapStyleWord(true); // Enable word wrapping
@@ -36,7 +51,7 @@ public class App extends JFrame {
         getContentPane().add(scrollPane);
 
         // Extract text in a separate thread to avoid freezing the Swing EDT
-        new Thread(() -> extractTextAndDisplay(textArea, filePath)).start();
+        //new Thread(() -> extractTextAndDisplay(textArea, filePath)).start();
     }
 
     private void extractTextAndDisplay(JTextArea textArea, String filePath) {
@@ -73,13 +88,13 @@ public class App extends JFrame {
     }
 
     public static void main(String[] args) {
+        // Application.launch(Main.class, args);
+       
         // Ensure the creation and display of the UI happens on the EDT
+        
 
-        SwingUtilities.invokeLater(() -> {
-            String filePath = (args.length > 0) ? args[0] : "";
-            App app = new App(filePath);
-            app.setVisible(true);
-        });
+        
     }
+
 }
 

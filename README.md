@@ -23,7 +23,7 @@ jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target"
 ```
 
 ```
-jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "HWPX Reader (built by Walter)" --main-jar hwpx-reader-1.0.0.jar --main-class com.hwpxreader.app.Main --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns" --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties"
+jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "HWPX Reader (built by Walter and Marc)" --main-jar hwpx-reader-1.0.0.jar --main-class com.hwpxreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties"
 ```
 
 ```

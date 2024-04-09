@@ -51,10 +51,10 @@ public class App extends JFrame {
         getContentPane().add(scrollPane);
 
         // Extract text in a separate thread to avoid freezing the Swing EDT
-        //new Thread(() -> extractTextAndDisplay(textArea, filePath)).start();
+        new Thread(() -> extractTextAndDisplay(textArea, file)).start();
     }
 
-    private void extractTextAndDisplay(JTextArea textArea, String filePath) {
+    private void extractTextAndDisplay(JTextArea textArea, File file) {
         // SwingUtilities.invokeLater is used to update the UI components from outside the EDT
         try {
             TextMarks textMarks = new TextMarks()
@@ -72,7 +72,7 @@ public class App extends JFrame {
                     .lineStartAnd("")
                     .lineEndAnd("");
 
-            HWPXFile HWPXFile = HWPXReader.fromFilepath(filePath);
+            HWPXFile HWPXFile = HWPXReader.fromFile(file);
             // HWPXFile HWPXFile = HWPXReader.fromFilepath("/Users/waltertay/Documents/Code/hwpx-reader/test2.hwpx");
             String extractedText = TextExtractor.extract(
                     HWPXFile,

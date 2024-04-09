@@ -57,8 +57,8 @@ public class App extends JFrame {
                     .lineStartAnd("")
                     .lineEndAnd("");
 
-            HWPXFile HWPXFile = HWPXReader.fromFilepath(filePath);
-            // HWPXFile HWPXFile = HWPXReader.fromFilepath("/Users/waltertay/Documents/Code/hwpx-reader/test2.hwpx");
+            // HWPXFile HWPXFile = HWPXReader.fromFilepath(filePath);
+            HWPXFile HWPXFile = HWPXReader.fromFilepath("/Users/waltertay/Documents/Code/hwpx-reader/test2.hwpx");
             String extractedText = TextExtractor.extract(
                     HWPXFile,
                     TextExtractMethod.AppendControlTextAfterParagraphText,

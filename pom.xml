@@ -8,9 +8,9 @@
   <artifactId>hwpx-reader</artifactId>
   <version>1.0.0</version>
 
-  <name>hwpx-reader</name>
+  <name>soju</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://www.waltertay.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

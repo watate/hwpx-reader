@@ -14,20 +14,14 @@ Running the application. This is possible because of this plugin: https://www.mo
 mvn exec:java
 ```
 
-Packaging the app into a .exe and .dmg
+Packaging the app into a .dmg
 ```
-jpackage --type dmg --input input-folder --name MyApp --main-jar myapp.jar --main-class com.mycompany.Main --icon myapp.icns
-```
-```
-jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "HWPX Reader (built by Walter)" --main-jar hwpx-reader-1.0.0.jar --main-class com.hwpxreader.app.App --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns" --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties"
+jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "SojuHWPX" --main-jar hwpx-reader-1.0.0-jar-with-dependencies.jar --main-class com.hwpxreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties" --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns"
 ```
 
+Packaging the app into an .exe
 ```
-jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "HWPX Reader (built by Walter and Marc)" --main-jar hwpx-reader-1.0.0.jar --main-class com.hwpxreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties"
-```
-
-```
-jpackage --type exe --input input-folder --name MyApp --main-jar myapp.jar --main-class com.mycompany.Main --icon myapp.ico --file-associations file_association.properties --dest output-folder
+jpackage --type exe --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "SojuHWPX" --main-jar hwpx-reader-1.0.0-jar-with-dependencies.jar --main-class com.hwpxreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties" --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns"
 ```
 
 Run application with explicit classpath
@@ -47,3 +41,4 @@ sudo /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/jpackage
 - Currently stuck because "java package" is refusing to package javaFX runtime components. Found this github issue: https://stackoverflow.com/questions/54063041/package-a-non-modular-javafx-application
 - I am giving up on JavaFX and switching to Swing. Here's why: try creating a Maven project with the command here: https://openjfx.io/openjfx-docs/#maven. After that, do mvn compile and mvn package, then use jpackage to turn it into a .dmg. You'll find that the application won't even open, even though it works perfectly fine when you're just doing "mvn clean javafx:run".
 - This StackOverflow seems to address how to double-click to open the .HWPX: https://stackoverflow.com/questions/10546427/java-swing-how-to-double-click-a-project-file-on-mac-to-open-my-application-an
+- This StackOverflow solved the double-click to open problem: https://stackoverflow.com/questions/29101472/pass-parameters-to-javafx-application-by-double-click-on-file

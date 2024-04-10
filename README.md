@@ -21,7 +21,7 @@ jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target"
 
 Packaging the app into an .exe
 ```
-jpackage --type exe --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "SojuHWPX" --main-jar hwpx-reader-1.0.0-jar-with-dependencies.jar --main-class com.hwpxreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties" --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns"
+jpackage --type exe --input "C:\Users\james\Documents\VSCode\hwpx-reader\target" --name "SojuHWPX" --main-jar hwpx-reader-1.0.0-jar-with-dependencies.jar --main-class com.hwpxreader.app.Main --file-associations "C:\Users\james\Documents\VSCode\hwpx-reader\assets\win.properties" --icon "C:\Users\james\Documents\VSCode\hwpx-reader\assets\icon.ico"
 ```
 
 Run application with explicit classpath
@@ -42,3 +42,4 @@ sudo /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/jpackage
 - I am giving up on JavaFX and switching to Swing. Here's why: try creating a Maven project with the command here: https://openjfx.io/openjfx-docs/#maven. After that, do mvn compile and mvn package, then use jpackage to turn it into a .dmg. You'll find that the application won't even open, even though it works perfectly fine when you're just doing "mvn clean javafx:run".
 - This StackOverflow seems to address how to double-click to open the .HWPX: https://stackoverflow.com/questions/10546427/java-swing-how-to-double-click-a-project-file-on-mac-to-open-my-application-an
 - This StackOverflow solved the double-click to open problem: https://stackoverflow.com/questions/29101472/pass-parameters-to-javafx-application-by-double-click-on-file
+- Solving "Failed to launch JVM" on Windows: https://stackoverflow.com/questions/75578985/failed-to-launch-jvm-after-using-jpackage-to-create-exe

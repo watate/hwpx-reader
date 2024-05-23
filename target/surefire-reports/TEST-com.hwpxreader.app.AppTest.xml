@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.hwpxreader.app.AppTest" time="0.034" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.hwpxreader.app.AppTest" time="0.03" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/waltertay/Documents/Code/hwpx-reader/target/test-classes:/Users/waltertay/Documents/Code/hwpx-reader/target/classes:/Users/waltertay/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/waltertay/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/waltertay/.m2/repository/kr/dogfoot/hwpxlib/1.0.3/hwpxlib-1.0.3.jar:"/>
+    <property name="java.class.path" value="/Users/waltertay/Documents/Code/hwpx-reader/target/test-classes:/Users/waltertay/Documents/Code/hwpx-reader/target/classes:/Users/waltertay/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/waltertay/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/waltertay/.m2/repository/kr/dogfoot/hwplib/1.1.6/hwplib-1.1.6.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="SG"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/21.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/waltertay/Documents/Code/hwpx-reader/target/surefire/surefirebooter18384877066322232896.jar /Users/waltertay/Documents/Code/hwpx-reader/target/surefire 2024-04-10T12-44-02_404-jvmRun1 surefire9520577601595645452tmp surefire_011848045390203810922tmp"/>
+    <property name="sun.java.command" value="/Users/waltertay/Documents/Code/hwpx-reader/target/surefire/surefirebooter2476565856327493749.jar /Users/waltertay/Documents/Code/hwpx-reader/target/surefire 2024-05-23T14-52-34_109-jvmRun1 surefire8498827328669737563tmp surefire_02981995389779834941tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/waltertay/Documents/Code/hwpx-reader/target/test-classes:/Users/waltertay/Documents/Code/hwpx-reader/target/classes:/Users/waltertay/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/waltertay/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/waltertay/.m2/repository/kr/dogfoot/hwpxlib/1.0.3/hwpxlib-1.0.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/waltertay/Documents/Code/hwpx-reader/target/test-classes:/Users/waltertay/Documents/Code/hwpx-reader/target/classes:/Users/waltertay/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/waltertay/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/waltertay/.m2/repository/kr/dogfoot/hwplib/1.1.6/hwplib-1.1.6.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/waltertay"/>
     <property name="user.language" value="en"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/waltertay/Documents/Code/hwpx-reader/target/surefire/surefirebooter18384877066322232896.jar"/>
+    <property name="surefire.real.class.path" value="/Users/waltertay/Documents/Code/hwpx-reader/target/surefire/surefirebooter2476565856327493749.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.2"/>
@@ -58,5 +58,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.hwpxreader.app.AppTest" time="0.005"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.hwpxreader.app.AppTest" time="0.003"/>
 </testsuite>

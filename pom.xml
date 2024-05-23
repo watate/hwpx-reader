@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.hwpxreader.app</groupId>
-  <artifactId>hwpx-reader</artifactId>
+  <groupId>com.hwpreader.app</groupId>
+  <artifactId>hwp-reader</artifactId>
   <version>1.0.0</version>
 
   <name>soju</name>
@@ -25,11 +25,11 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/kr.dogfoot/hwpxlib -->
+    <!-- https://mvnrepository.com/artifact/kr.dogfoot/hwplib -->
     <dependency>
         <groupId>kr.dogfoot</groupId>
-        <artifactId>hwpxlib</artifactId>
-        <version>1.0.3</version>
+        <artifactId>hwplib</artifactId>
+        <version>1.1.6</version>
     </dependency>
   </dependencies>
 
@@ -79,7 +79,7 @@
           <artifactId>exec-maven-plugin</artifactId>
           <version>3.2.0</version>
           <configuration>
-              <mainClass>com.hwpxreader.app.Main</mainClass>
+              <mainClass>com.hwpreader.app.Main</mainClass>
           </configuration>
         </plugin>
         <plugin>

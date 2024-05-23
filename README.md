@@ -14,9 +14,14 @@ Running the application. This is possible because of this plugin: https://www.mo
 mvn exec:java
 ```
 
-Packaging the app into a .dmg
+Packaging the app into a .dmg (SojuHWPX)
 ```
 jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "SojuHWPX" --main-jar hwpx-reader-1.0.0-jar-with-dependencies.jar --main-class com.hwpxreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties" --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns"
+```
+
+DMG for SojuHWP
+```
+jpackage --type dmg --input "/Users/waltertay/Documents/Code/hwpx-reader/target" --name "SojuHWP" --main-jar hwp-reader-1.0.0-jar-with-dependencies.jar --main-class com.hwpreader.app.Main --file-associations "/Users/waltertay/Documents/Code/hwpx-reader/assets/mac.properties" --icon "/Users/waltertay/Documents/Code/hwpx-reader/assets/icon.icns"
 ```
 
 Packaging the app into an .exe
